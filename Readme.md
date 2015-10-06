@@ -22,7 +22,7 @@ The simplest way to deploy and test your add-in is to copy the files to a networ
     
     c.  Choose **Trust Center**, and then choose the **Trust Center Settings** button.
     
-    d.  Choose **Trusted App Catalogs**.
+    d.  Choose **Trusted Add-in Catalogs**.
     
     e.  In the **Catalog Url** box, enter the path to the network share you created in step 3, and then choose **Add Catalog**.
     
