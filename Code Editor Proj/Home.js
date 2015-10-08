@@ -4,20 +4,16 @@
 (function () {
     "use strict";
 
-    var keyword;
-    var language;
-
-
     // The initialize function must be run each time a new page is loaded
     Office.initialize = function (reason) {
         $(document).ready(function () {
             app.initialize();
-			
-			// If not using Excel 2016, return
-			if (!Office.context.requirements.isSetSupported('ExcelApi', '1.1')) {
-			    app.showNotification("Need Office 2016 or greater", "Sorry, this app only works with newer versions of Excel.");
-			    return;
-			}
+
+            // If not using Excel 2016, return
+            if (!Office.context.requirements.isSetSupported('ExcelApi', '1.1')) {
+                app.showNotification("Need Office 2016 or greater", "Sorry, this add-in only works with newer versions of Excel.");
+                return;
+            }
 
             // Attach a click event handler for the button
             $('#get-repo-info').click(getRepoInfo);
@@ -38,21 +34,17 @@
                 // Queue a command to format the header row
                 sheet.getRange("A1:B1").format.font.bold = true;
 
-                // Queue a command to add a new table to contain the results
-                var table = ctx.workbook.tables.add('A8:G8', true);
-                table.name = "reposTable";
-
                 //Run the queued-up commands, and return a promise to indicate task completion
                 return ctx.sync();
             })
-            // Always catch errors on the outside of Excel.run()
-            .catch(function (error) {
-                app.showNotification("Error: " + error);
-                console.log("Error: " + error);
-                if (error instanceof OfficeExtension.RuntimeError) {
-                    console.log("Debug info: " + JSON.stringify(error.debugInfo));
-                }
-            });
+		    .catch(function (error) {
+		        // Always be sure to catch any accumulated errors that bubble up from the Excel.run execution
+		        app.showNotification("Error: " + error);
+		        console.log("Error: " + error);
+		        if (error instanceof OfficeExtension.Error) {
+		            console.log("Debug info: " + JSON.stringify(error.debugInfo));
+		        }
+		    });
         });
     };
 
@@ -72,30 +64,27 @@
             //Run the queued-up commands, and return a promise to indicate task completion
             return ctx.sync().then(function () {
                 // Get the city and state
-                keyword = range.values[0][0];
-                language = range.values[0][1];
+                var keyword = range.values[0][0];
+                var language = range.values[0][1];
 
                 // Create the URL
                 var requestUrl = "https://api.github.com/search/repositories?q=" + keyword + "+language:" + language + "&sort=stars&order=desc";
 
-                // Make the AJAX request to the GitHub Search API
+                // Make the AJAX request to the GitHub Search API (https://developer.github.com/v3/search/#search-repositories)
+                // This API by default returns the first 30 matching repos. If you want additional results, look up the GitHub docs for info
                 // Note that for unauthenticated requests like this, GitHub API allows you to make up to 10 requests per minute.
-                $.ajax({
-                    url: requestUrl,
-                    dataType: "json",
-                    success: function (data) {
+                $.ajax(requestUrl)
+                    .done(function (data) {
                         // Write the repo info to the active sheet
                         writeRepoInfo(data);
-                    },
-                    failure: function (error) {
-                        var err = "Error calling GitHUB API: " + error;
-                        app.showNotification(JSON.stringify(err));
-                        console.log(JSON.stringify(err));
-                    }
-                });
-
-            });
-        })
+                    })
+                    .fail(function (jqXHR, textStatus, errorThrown) {
+                        var response = $.parseJSON(jqXHR.responseText);
+                        app.showNotification("Error calling GitHub API", "Error message: " + response.message + ".    "
+                            + "For more info, check out: " + response.documentation_url);
+                        console.log(JSON.stringify(jqXHR));
+                    });
+            })
 		.catch(function (error) {
 		    // Always be sure to catch any accumulated errors that bubble up from the Excel.run execution
 		    app.showNotification("Error: " + error);
@@ -104,6 +93,7 @@
 		        console.log("Debug info: " + JSON.stringify(error.debugInfo));
 		    }
 		});
+        })
     }
 
 
@@ -116,10 +106,8 @@
             // Create a proxy object for the active sheet
             var sheet = ctx.workbook.worksheets.getActiveWorksheet();
 
-
-            // Create a proxy for the tables rows 
-            var table = ctx.workbook.tables.getItem('reposTable');
-
+            // Queue a command to add a new table to contain the results
+            var table = ctx.workbook.tables.add('A8:G8', true);
 
             // Queue a command to get the newly added table 
             table.getHeaderRowRange().values = [["NAME", "FULL NAME", "URL", "DESCRIPTION", "FORKS_COUNT", "STAR_GAZERS_COUNT", "WATCHERS_COUNT"]];
