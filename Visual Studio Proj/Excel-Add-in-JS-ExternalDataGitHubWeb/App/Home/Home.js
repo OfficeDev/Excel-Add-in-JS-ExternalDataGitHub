@@ -57,14 +57,30 @@
         // Run a batch operation against the Excel object model
         Excel.run(function (ctx) {
 
+            // Create a proxy object for the active sheet
+            var sheet = ctx.workbook.worksheets.getActiveWorksheet();
+
             // Create a proxy object for the range that contains the city and state
-            var range = ctx.workbook.worksheets.getActiveWorksheet().getRange("A2:B2");
+            var range = sheet.getRange("A2:B2");
 
             // Queue a command to load the values of the range
             range.load("values");
 
+            // We need to delete output table if it already exists
+            // Queue a command to load the name property of the table items of the worksheet
+            sheet.tables.load("name");
+
             //Run the queued-up commands, and return a promise to indicate task completion
             return ctx.sync().then(function () {
+
+                // Loop through the tables collection to find out if the output table already exists
+                for (var i = 0; i < sheet.tables.items.length; i++) {
+                    if (sheet.tables.items[i].name == "reposTable") {
+                        sheet.tables.items[i].delete();
+                        break;
+                    }
+                }
+
                 // Get the city and state
                 var keyword = range.values[0][0];
                 var language = range.values[0][1];
@@ -87,6 +103,7 @@
                         console.log(JSON.stringify(jqXHR));
                     });
             })
+        .then(ctx.sync)
 		.catch(function (error) {
 		    // Always be sure to catch any accumulated errors that bubble up from the Excel.run execution
 		    app.showNotification("Error: " + error);
@@ -109,7 +126,8 @@
             var sheet = ctx.workbook.worksheets.getActiveWorksheet();
 
             // Queue a command to add a new table to contain the results
-            var table = ctx.workbook.tables.add('A8:G8', true);
+            var table = sheet.tables.add('A8:G8', true);
+            table.name = "reposTable";
 
             // Queue a command to get the newly added table 
             table.getHeaderRowRange().values = [["NAME", "FULL NAME", "URL", "DESCRIPTION", "FORKS_COUNT", "STAR_GAZERS_COUNT", "WATCHERS_COUNT"]];
