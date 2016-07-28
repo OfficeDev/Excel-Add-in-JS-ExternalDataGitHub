@@ -11,9 +11,9 @@ Dieses Aufgabenbereich-Add-In veranschaulicht, wie Daten aus einem externen Dien
 
 Am einfachsten können Sie Ihr Add-In bereitstellen und testen, indem Sie die Dateien in eine Netzwerkfreigabe kopieren.
 
-1.  Erstellen Sie einen Ordner in einer Netzwerkfreigabe (z.ä B. \\\MyShare\ExternalDataGitHub), und kopieren Sie alle Dateien im Ordner „ Code Editor Proj”. 
+1.  Erstellen Sie einen Ordner in einer Netzwerkfreigabe (z. B. \\\MyShare\ExternalDataGitHub), und kopieren Sie alle Dateien im Ordner „Code Editor Proj”. 
 2.  Bearbeiten Sie das <SourceLocation>-Element der Manifestdatei, damit es auf die HTML-Datei in der Netzwerkfreigabe aus Schrittä 1 zeigt. 
-3.  Kopieren Sie das Manifest (ExternalDataGitHubManifest.xml) in eine Netzwerkfreigabe (z.ä B. \\\MyShare\MyManifests).
+3.  Kopieren Sie das Manifest (ExternalDataGitHubManifest.xml) in eine Netzwerkfreigabe (z. B. \\\MyShare\MyManifests).
 4.  Fügen Sie den Freigabepfad, unter dem das Manifest enthalten ist, als vertrauenswürdigen App-Katalog in Excel hinzu.
 
     a. Starten Sie Excel, und öffnen Sie ein leeres Arbeitsblatt.  
@@ -34,7 +34,7 @@ Am einfachsten können Sie Ihr Add-In bereitstellen und testen, indem Sie die Da
     
   b. Wählen Sie im Dialogfenster **Office-Add-Ins** die Option **Freigegebener Ordner** aus.
     
-  c. Wählen Sie **GitHub-Beispiel für externe Daten**>**Einfügen**. The add-in opens in a task pane as shown in this diagram. 
+  c. Wählen Sie **GitHub-Beispiel für externe Daten**>**Einfügen**. Dabei wird die Studiencreditsverfolgung im aktiven Arbeitsblatt erstellt, wie in der folgenden Abbildung dargestellt. 
       
    ![GitHub-Beispiel für externe Daten](../images/ExternalDataGitHub_taskpane.PNG) 
 
