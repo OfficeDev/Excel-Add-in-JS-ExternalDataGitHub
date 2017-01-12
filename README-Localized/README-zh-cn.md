@@ -4,7 +4,7 @@ _适用于：Excel 2016_
 
 此任务窗格外接程序介绍如何从外部服务加载数据，如通过使用 Excel 2016 中的 GitHub 搜索 API。它有两种类型：代码编辑器和 Visual Studio。
 
-![外部数据 GitHub 示例](../Images/ExternalDataGitHub_data.PNG)
+![外部数据 GitHub 示例](../images/ExternalDataGitHub_data.PNG)
 
 ## <a name="try-it-out"></a>尝试一下
 ### <a name="code-editor-version"></a>代码编辑器版本
@@ -36,21 +36,21 @@ _适用于：Excel 2016_
 
     c.依次选择“**外部数据 GitHub 示例**”>“**插入**”。此时，外接程序在任务窗格中打开，如下图所示。
 
-   ![外部数据 GitHub 示例](../Images/ExternalDataGitHub_taskpane.PNG)
+   ![外部数据 GitHub 示例](../images/ExternalDataGitHub_taskpane.PNG)
 
     d.在 A2 和 B2 单元格中输入一个搜索关键字和编程语言，然后单击“获取存储库信息”按钮，以将结果加载到电子表格中的表，如下所示。
 
-      ![外部数据 GitHub 示例](../Images/ExternalDataGitHub_data.PNG)
+      ![外部数据 GitHub 示例](../images/ExternalDataGitHub_data.PNG)
 
 ### <a name="visual-studio-version"></a>Visual Studio 版本
 1.  将项目复制到本地文件夹，并在 Visual Studio 中打开 Excel-Add-in-JS-ExternalDataGitHub.sln。
 2.  按 F5 生成并部署示例外接程序。Excel 启动并且外接程序会在空白工作簿右侧的任务窗格中打开，如下图所示。
 
-  ![外部数据 GitHub 示例](../Images/ExternalDataGitHub_taskpane.PNG)
+  ![外部数据 GitHub 示例](../images/ExternalDataGitHub_taskpane.PNG)
 
 3.  在 A2 和 B2 单元格中输入一个搜索关键字和编程语言，然后单击“获取存储库信息”按钮，以将结果加载到电子表格中的表，如下所示。
 
-  ![外部数据 GitHub 示例](../Images/ExternalDataGitHub_data.PNG)
+  ![外部数据 GitHub 示例](../images/ExternalDataGitHub_data.PNG)
 
 
 ### <a name="learn-more"></a>了解详细信息

@@ -4,7 +4,7 @@ _適用対象:Excel 2016_
 
 この作業ウィンドウ アドインには、Excel 2016 で GitHub Search API を使用して外部サービスからデータをロードする方法が示されます。コード エディターと Visual Studio のいずれかを選択できます。
 
-![外部データ GitHub のサンプル](../Images/ExternalDataGitHub_data.PNG)
+![外部データ GitHub のサンプル](../images/ExternalDataGitHub_data.PNG)
 
 ## <a name="try-it-out"></a>お試しください。
 ### <a name="code-editor-version"></a>コード エディターのバージョン
@@ -36,21 +36,21 @@ _適用対象:Excel 2016_
 
     c.**[外部データ GitHub のサンプル]**>**[挿入]** の順に選択します。次の図に示すように、作業ウィンドウでアドインが開きます。
 
-   ![外部データ GitHub のサンプル](../Images/ExternalDataGitHub_taskpane.PNG)
+   ![外部データ GitHub のサンプル](../images/ExternalDataGitHub_taskpane.PNG)
 
     d.セル A2 と B2 に、検索キーワードとプログラミング言語を入力し、[リポジトリ情報を取得] ボタンをクリックすると、以下のように、スプレッドシートのテーブルに結果が読み込まれます。
 
-      ![外部データ GitHub のサンプル](../Images/ExternalDataGitHub_data.PNG)
+      ![外部データ GitHub のサンプル](../images/ExternalDataGitHub_data.PNG)
 
 ### <a name="visual-studio-version"></a>Visual Studio のバージョン
 1.  プロジェクトをローカル フォルダーにコピーし、Visual Studio で Excel-Add-in-JS-ExternalDataGitHub.sln を開きます。
 2.  F5 キーを押して、サンプル アドインをビルドおよび展開します。Excel が起動し、次の図に示すように、空白のワークシートの右側の作業ウィンドウでアドインが開きます。
 
-  ![外部データ GitHub のサンプル](../Images/ExternalDataGitHub_taskpane.PNG)
+  ![外部データ GitHub のサンプル](../images/ExternalDataGitHub_taskpane.PNG)
 
 3.  セル A2 と B2 に、検索キーワードとプログラミング言語を入力し、[リポジトリ情報を取得] ボタンをクリックすると、以下のように、スプレッドシートのテーブルに結果が読み込まれます。
 
-  ![外部データ GitHub のサンプル](../Images/ExternalDataGitHub_data.PNG)
+  ![外部データ GitHub のサンプル](../images/ExternalDataGitHub_data.PNG)
 
 
 ### <a name="learn-more"></a>詳細を見る

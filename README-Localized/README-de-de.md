@@ -4,7 +4,7 @@ _Gilt für: Excel 2016_
 
 Dieses Aufgabenbereich-Add-In veranschaulicht, wie Daten aus einem externen Dienst geladen werden, beispielsweise mithilfe der GitHub Search-APIs in Excel 2016. Es ist in zwei Versionen verfügbar: Code-Editor und Visual Studio.
 
-![GitHub-Beispiel für externe Daten](../Images/ExternalDataGitHub_data.PNG)
+![GitHub-Beispiel für externe Daten](../images/ExternalDataGitHub_data.PNG)
 
 ## <a name="try-it-out"></a>Probieren Sie es aus
 ### <a name="code-editor-version"></a>Code-Editor-Version
@@ -36,21 +36,21 @@ Am einfachsten können Sie Ihr Add-In bereitstellen und testen, indem Sie die Da
 
     c.  Wählen Sie **GitHub-Beispiel für externe Daten**>**Einfügen**. Das Add-In wird in einem Aufgabenbereich geöffnet, wie in diesem Diagramm dargestellt.
 
-   ![GitHub-Beispiel für externe Daten](../Images/ExternalDataGitHub_taskpane.PNG)
+   ![GitHub-Beispiel für externe Daten](../images/ExternalDataGitHub_taskpane.PNG)
 
     d.  Geben Sie einen Suchschlüsselwort und eine Programmiersprache in den Zellen A2 und B2 ein, und klicken Sie auf die Schaltfläche „Repository-Informationen abrufen“, um die Ergebnisse in die Tabelle in dem Arbeitsblatt zu laden, wie im Folgenden dargestellt.
 
-      ![GitHub-Beispiel für externe Daten](../Images/ExternalDataGitHub_data.PNG)
+      ![GitHub-Beispiel für externe Daten](../images/ExternalDataGitHub_data.PNG)
 
 ### <a name="visual-studio-version"></a>Visual Studio-Version
 1.  Kopieren Sie das Projekt in einen lokalen Ordner, und öffnen Sie die Datei „Excel-Add-in-JS-ExternalDataGitHub.sln“ in Visual Studio.
 2.  Drücken Sie F5, um das Beispiel-Add-In zu erstellen und bereitzustellen. Excel wird gestartet und das Add-In wird in einem Aufgabenbereich rechts neben einem leeren Arbeitsblatt geöffnet, wie in der folgenden Abbildung dargestellt.
 
-  ![GitHub-Beispiel für externe Daten](../Images/ExternalDataGitHub_taskpane.PNG)
+  ![GitHub-Beispiel für externe Daten](../images/ExternalDataGitHub_taskpane.PNG)
 
 3.  Geben Sie einen Suchschlüsselwort und eine Programmiersprache in den Zellen A2 und B2 ein, und klicken Sie auf die Schaltfläche „Repository-Informationen abrufen“, um die Ergebnisse in die Tabelle in dem Arbeitsblatt zu laden, wie im Folgenden dargestellt.
 
-  ![GitHub-Beispiel für externe Daten](../Images/ExternalDataGitHub_data.PNG)
+  ![GitHub-Beispiel für externe Daten](../images/ExternalDataGitHub_data.PNG)
 
 
 ### <a name="learn-more"></a>Weitere Informationen

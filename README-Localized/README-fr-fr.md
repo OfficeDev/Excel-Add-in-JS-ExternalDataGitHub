@@ -4,7 +4,7 @@ _S’applique à : Excel 2016_
 
 Ce complément de volet Office montre comment charger des données à partir d’un service externe, par exemple à l’aide des API de recherche GitHub dans Excel 2016. Il a deux versions : éditeur de code et Visual Studio.
 
-![Exemple de GitHub de données externes](../Images/ExternalDataGitHub_data.PNG)
+![Exemple de GitHub de données externes](../images/ExternalDataGitHub_data.PNG)
 
 ## <a name="try-it-out"></a>Essayez !
 ### <a name="code-editor-version"></a>Version d’éditeur de code
@@ -36,21 +36,21 @@ Pour déployer et tester votre complément, le plus simple consiste à copier le
 
     c.  Choisissez **Exemple de GitHub de données externes**>**Insertion**. Le complément s’ouvre dans un volet Office, comme indiqué sur le diagramme.
 
-   ![Exemple de GitHub de données externes](../Images/ExternalDataGitHub_taskpane.PNG)
+   ![Exemple de GitHub de données externes](../images/ExternalDataGitHub_taskpane.PNG)
 
     d.  Entrez un mot clé de recherche et un langage de programmation dans les cellules A2 et B2, puis cliquez sur le bouton Obtenir des informations sur le référentiel pour charger les résultats dans le tableau de la feuille de calcul, comme indiqué ci-dessous.
 
-      ![Exemple de GitHub de données externes](../Images/ExternalDataGitHub_data.PNG)
+      ![Exemple de GitHub de données externes](../images/ExternalDataGitHub_data.PNG)
 
 ### <a name="visual-studio-version"></a>Version de Visual Studio
 1.  Copiez le projet dans un dossier local et ouvrez le fichier Excel-Add-in-JS-ExternalDataGitHub.sln dans Visual Studio.
 2.  Appuyez sur F5 pour créer et déployer l’exemple de complément. Excel démarre et le complément s’ouvre dans un volet Office à droite de la feuille de calcul active, comme indiqué dans l’illustration suivante.
 
-  ![Exemple de GitHub de données externes](../Images/ExternalDataGitHub_taskpane.PNG)
+  ![Exemple de GitHub de données externes](../images/ExternalDataGitHub_taskpane.PNG)
 
 3.  Entrez un mot clé de recherche et un langage de programmation dans les cellules A2 et B2, puis cliquez sur le bouton Obtenir des informations sur le référentiel pour charger les résultats dans le tableau de la feuille de calcul, comme indiqué ci-dessous.
 
-  ![Exemple de GitHub de données externes](../Images/ExternalDataGitHub_data.PNG)
+  ![Exemple de GitHub de données externes](../images/ExternalDataGitHub_data.PNG)
 
 
 ### <a name="learn-more"></a>En savoir plus

@@ -4,7 +4,7 @@ _適用於：Excel 2016_
 
 這個工作窗格增益集示範如何從外部服務載入資料，例如在 Excel 2016 中使用 GitHub Search API。共有兩種型態︰程式碼編輯器和 Visual Studio。
 
-![外部資料 GitHub 範例](../Images/ExternalDataGitHub_data.PNG)
+![外部資料 GitHub 範例](../images/ExternalDataGitHub_data.PNG)
 
 ## <a name="try-it-out"></a>進行測試
 ### <a name="code-editor-version"></a>程式碼編輯器版本
@@ -36,21 +36,21 @@ _適用於：Excel 2016_
 
     c.選擇 **[外部資料 GitHub 範例]** > **[插入]**。增益集會在工作窗格中開啟，如此圖表所示。
 
-   ![外部資料 GitHub 範例](../Images/ExternalDataGitHub_taskpane.PNG)
+   ![外部資料 GitHub 範例](../images/ExternalDataGitHub_taskpane.PNG)
 
     d.在儲存格 A2 與 B2 中，輸入搜尋關鍵字和程式設計語言，按一下 [取得儲存機制資訊] 按鈕，將結果載入至試算表中的資料表，如下所示。
 
-      ![外部資料 GitHub 範例](../Images/ExternalDataGitHub_data.PNG)
+      ![外部資料 GitHub 範例](../images/ExternalDataGitHub_data.PNG)
 
 ### <a name="visual-studio-version"></a>Visual Studio 版本
 1.  將專案複製到本機資料夾，並在 Visual Studio 中開啟 Excel-Add-in-JS-ExternalDataGitHub.sln。
 2.  按 F5 建置及部署範例增益集。Excel 會啟動，且增益集會在工作表右側空白部分的工作窗格中開啟，如下圖所示。
 
-  ![外部資料 GitHub 範例](../Images/ExternalDataGitHub_taskpane.PNG)
+  ![外部資料 GitHub 範例](../images/ExternalDataGitHub_taskpane.PNG)
 
 3.  在儲存格 A2 與 B2 中，輸入搜尋關鍵字和程式設計語言，按一下 [取得儲存機制資訊] 按鈕，將結果載入至試算表中的資料表，如下所示。
 
-  ![外部資料 GitHub 範例](../Images/ExternalDataGitHub_data.PNG)
+  ![外部資料 GitHub 範例](../images/ExternalDataGitHub_data.PNG)
 
 
 ### <a name="learn-more"></a>深入了解
