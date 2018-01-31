@@ -1,0 +1,19 @@
+### YamlMime:Sample
+sample:
+- name: External Data from GitHub Task Pane Add-in Sample for Excel 2016
+  path: ''
+  description: 'This task pane add-in shows how to load data from an external service such as by using the GitHub Search APIs in Excel 2016. It comes in two flavors: code editor and Visual Studio.'
+  readme: ''
+  generateZip: FALSE
+  isLive: TRUE
+  technologies:
+  - Office Add-in
+  azureDeploy: ''
+  author: umasubra
+  platforms: []
+  languages:
+  - JavaScript
+  extensions:
+    products:
+    - Excel
+    scenarios: []
